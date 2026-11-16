@@ -47,7 +47,7 @@ python -m pomelomae.finetune_ssc_regression --data-path data --measurements meas
 python -m pomelomae.evaluate_ssc_checkpoint --data-path data --measurements measurements.csv --checkpoint runs/seed0/finetune/checkpoint-best-image-r2.pth --output-dir runs/seed0/test --seed 0
 ```
 
-To run all three seeds, repeat the commands with `--seed 1` and `--seed 2` and use a separate output directory for each seed. To reproduce the 0.75-mask variant used for the historical main comparison table, add `--mask-ratio 0.75` to the pre-training command. Fine-tuning selects the checkpoint with the highest image-level validation R². Evaluation writes separate image-level and fruit-level metrics and predictions. The fruit-level prediction is the mean of the four image predictions.
+To run all three seeds, repeat the commands with `--seed 1` and `--seed 2` and use a separate output directory for each seed. Fine-tuning selects the checkpoint with the highest image-level validation R². Evaluation writes separate image-level and fruit-level metrics and predictions. The fruit-level prediction is the mean of the four image predictions.
 
 ## Default configuration
 
