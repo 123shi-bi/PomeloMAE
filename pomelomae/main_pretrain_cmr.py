@@ -144,7 +144,7 @@ def main(args):
         batch_size=args.batch_size,
         num_workers=args.num_workers,
         pin_memory=args.pin_mem,
-        drop_last=True,
+        drop_last=False,
     )
     if len(data_loader_train) == 0:
         raise ValueError('The training split contains fewer complete four-view groups than one batch.')
